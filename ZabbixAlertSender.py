@@ -46,7 +46,8 @@ def main():
 
 def argument_check():
     if len(sys.argv) != 5:
-        print('Error: Invalid argument length, ensure script parameters are properly set in Zabbix.')
+        log_file('/var/log/cliq-alerts.txt',
+                 'Error: Invalid argument length, ensure script parameters are properly set in Zabbix.')
         exit(1)
 
 
